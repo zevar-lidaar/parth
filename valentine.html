@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Will You Be My Valentine, Parth? 💖</title>
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                background-color: #f9e2e8;
+                margin: 0;
+                padding: 40px 20px; /* Adjusted padding to ensure content stays low */
+                text-align: center;
+                position: relative;
+            }
+            h1 {
+                font-size: 3em;
+                color: #ff69b4;
+                margin-top: 50px;
+            }
+            .subheading {
+                font-size: 1.5em;
+                color: #ff1493;
+                margin-top: 20px;
+                z-index: 2;
+            }
+            .heart-animation {
+                position: absolute;
+                top: 350px; /* Adjusted position lower to avoid overlap */
+                left: 50%;
+                transform: translateX(-50%);
+                animation: floatHearts 2s infinite ease-in-out;
+                z-index: 1;
+            }
+            @keyframes floatHearts {
+                0% {
+                    transform: translateY(0) translateX(-50%);
+                }
+                50% {
+                    transform: translateY(-20px) translateX(-50%);
+                }
+                100% {
+                    transform: translateY(0) translateX(-50%);
+                }
+            }
+            
+            video {
+                border-radius: 15px;
+                margin-top: 30px;
+                animation: spin 5s linear infinite;
+            }
+            .button {
+                padding: 15px 30px;
+                margin-top: 30px;
+                font-size: 1.5em;
+                background-color: #ff69b4;
+                color: white;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                z-index: 2;
+            }
+            .button:hover {
+                background-color: #ff1493;
+            }
+            .fireworks {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: none;
+            }
+            .message {
+                font-size: 1.5em;
+                color: #ff69b4;
+                margin-top: 20px;
+            }
+            .soundcloud-player {
+                margin-top: 40px;
+            }
+            /* Confetti Box Adjustment */
+            .confetti-box {
+                position: absolute;
+                top: 40%; /* Adjusted top position to keep content visible */
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 10;
+                display: none;
+            }
+        </style>
+    </head>
+    
+<body>
+
+    <h1>Hey, Parth! 😏</h1>
+    <p style="font-size: 1.5em;">It's February 2nd,But here's a little early ask for you! 💕</p>
+
+    <!--  Animation -->
+    <div class="heart-animation">
+        <img src="https://media.giphy.com/media/DkYItUqjTUDWB65Gre/giphy.gif?cid=790b7611i6md2g7sdym2phrwrk162p32u642x7i606a2duw1&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Heart GIF" width="120">
+    </div>
+
+    <!--  Video -->
+    <video width="300" height="300" controls autoplay>
+        <source src="C:\Users\DELL\Downloads\WhatsApp Video 2025-02-02 at 00.57.39_c3c9b7f3.mp4" type="video/mp4">
+        <p>Your browser doesn't support HTML5 video. Here is a <a href="C:\Users\DELL\Downloads\WhatsApp Video 2025-02-02 at 00.57.39_c3c9b7f3.mp4">link to the video</a> instead.</p>
+    </video>
+
+    <!-- Play Button -->
+    <button class="button" id="yes-button">Yes, I’m yours forever,Manya! 🥰</button>
+    <button class="button" id="no-button">No? 😜</button>
+
+    <!-- Fireworks Animation -->
+    <div id="fireworks" class="fireworks">
+        <img src="https://media.giphy.com/media/TmT51OyQLFD7a/giphy.gif?cid=790b76119mg0r3yzmdkgfxaxjby8f4maegdt6gtjluhqdh3o&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Fireworks" width="120">
+    </div>
+
+    <!-- Teasing Message -->
+    <div class="message" id="message"></div>
+
+    <!-- Embed SoundCloud Player for "The Shade" -->
+    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1315515661&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/uno-stn777" title="frank" target="_blank" style="color: #cccccc; text-decoration: none;">frank</a> · <a href="https://soundcloud.com/uno-stn777/the-shade-rex-orange-county" title="the shade - rex orange county" target="_blank" style="color: #cccccc; text-decoration: none;">the shade - rex orange county</a></div>
+    <script>
+        //  Click Logic
+        document.getElementById('yes-button').addEventListener('click', function() {
+            document.getElementById('fireworks').style.display = 'block';
+            document.getElementById('message').innerText = "Yay! I’m yours forever, Parth! 🎉";
+        });
+
+        document.getElementById('no-button').addEventListener('click', function() {
+            document.getElementById('message').innerText = "Oops! Try again, Parth, you can’t escape me that easily! 😈";
+        });
+    </script>
+    <script>
+        // autoplay the song 
+        window.onload = function() {
+            var soundcloud = document.querySelector('iframe');
+            soundcloud.src += "&auto_play=true"; // Add auto_play=true 
+        };
+    </script>
+    <script>
+        // List 
+        const teasingQuestions = [
+            "Are you sure, Parth? 😳",
+            "Think again... I'm the cutest! 🥺",
+            "No? Really? What about all our late-night talks? 😏",
+            "What if I make puppy eyes? 🐶💖",
+            "You're joking, right? Right?! 😭",
+            "Oops! Button error! Try pressing 'Yes' instead! 😜",
+            "C'mon, Parth! I know you love meee! 🥰",
+            "I'll kill you if you click again! 👀",
+            "No more good I love You texts for you! 😈",
+            "You have one last chance to fix this. 😤",
+            "Warning: Clicking 'No' will make me sad. 🥺",
+            "Okay, fine. But I know you’ll regret it! 😏",
+            "Last warning, Parth! Do you really wanna do this?! 🫣",
+            "You're making it really hard for me to not be dramatic! 🎭😂",
+            "Fine. But now I’ll spam you with love messages! 💌",
+            "Aww, I know you’re just playing! Now press ‘Yes’! 😘"
+        ];
+    
+        let noClickCount = 0; // Counter for how many times  "No"
+    
+        document.getElementById('no-button').addEventListener('click', function() {
+            if (noClickCount < teasingQuestions.length) {
+                document.getElementById('message').innerText = teasingQuestions[noClickCount];
+                noClickCount++; // Move to the next teasing question
+            } else {
+                document.getElementById('message').innerText = "Okay, now you're just messing with me! 😡 Just say YES! 😤💕";
+            }
+        });
+    </script>
+    
+
+</body>
+</html>
